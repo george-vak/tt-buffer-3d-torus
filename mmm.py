@@ -893,15 +893,13 @@ def run_experiment() -> None:
     cqf_cycles = [120e-6, 160e-6, 200e-6]
 
     epsilon_target = 1e-5
-    n_gen_tt_target = 30000
-
-    # n_gen_tt_target = int(3 / epsilon_target)
+    n_gen_tt_target = int(3 / epsilon_target)
 
     drain_time = 0.02
     seeds = [1, 3]
     enable_tt_regulation = True
 
-    output_path = Path("simulation_results_final_ats_6x6x6.csv")
+    output_path = Path("results.csv")
     rows: List[Dict[str, object]] = []
 
     print("Параметры эксперимента")
